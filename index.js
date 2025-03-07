@@ -1,7 +1,12 @@
 const display = document.getElementById('display');
 
 function appendToDisplay(input){
-    display.value += input;
+    if (display.value === "Error"){
+        display.value = input;
+    }
+    else{
+        display.value += input;
+    }
 }
 
 function clearDisplay(){
