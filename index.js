@@ -1,0 +1,27 @@
+const display = document.getElementById('display');
+
+function appendToDisplay(input){
+    display.value += input;
+}
+
+function clearDisplay(){
+    display.value = '';
+}
+
+function calculate(){
+    try{
+        if(display.value === 'Error'){
+            clearDisplay();
+        }
+        else if(display.value == ""){
+            clearDisplay();
+        }
+        else{
+            display.value = eval(display.value);
+            // k nên dùng eval()
+        }
+    }
+    catch(error){
+        display.value = 'Error';
+    }
+}
