@@ -15,7 +15,7 @@ function clearDisplay(){
 
 function calculate(){
     try{
-        if(display.value === 'Error'){
+        if(display.value === 'Error' || display.value === "Infinity"){
             clearDisplay();
         }
         else if(display.value == ""){
